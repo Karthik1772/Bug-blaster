@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API_URL = "/api/tickets";
+// Use environment variable or your deployed backend URL
+const API_URL =
+  process.env.REACT_APP_API_URL || "http://localhost:5000/api/tickets";
 
 // Get all tickets using Promises
 export const getAllTickets = () => {
