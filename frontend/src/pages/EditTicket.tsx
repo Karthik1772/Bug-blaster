@@ -29,7 +29,7 @@ export default function EditTicket() {
     fetchTicket();
   }, [id, navigate]);
 
-  const handleSubmit = async (ticketData) => {
+  const handleSubmit = async (ticketData: any) => {
     try {
       await updateTicket(id, ticketData);
       await refreshTickets();

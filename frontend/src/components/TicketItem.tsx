@@ -4,17 +4,28 @@ import { deleteTicket } from "../services/api";
 import { useTickets } from "../context/TicketContext";
 import "../App.css";
 
-export default function TicketItem({ ticket }) {
+interface Ticket {
+  _id: string;
+  title: string;
+  description: string;
+  priority: 1 | 2 | 3;
+}
+
+interface TicketItemProps {
+  ticket: Ticket;
+}
+
+const TicketItem: React.FC<TicketItemProps> = ({ ticket }) => {
   const navigate = useNavigate();
   const { refreshTickets } = useTickets();
 
-  const priorityClass = {
+  const priorityClass: Record<1 | 2 | 3, string> = {
     1: "priority-low",
     2: "priority-medium",
     3: "priority-high",
   };
 
-  const priorityLabels = {
+  const priorityLabels: Record<1 | 2 | 3, string> = {
     1: "Low",
     2: "Medium",
     3: "High",
@@ -58,4 +69,6 @@ export default function TicketItem({ ticket }) {
       </div>
     </div>
   );
-}
+};
+
+export default TicketItem;

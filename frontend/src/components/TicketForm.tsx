@@ -1,12 +1,26 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 
-export default function TicketForm({
+// Define types for props and ticket data
+interface TicketData {
+  title: string;
+  description: string;
+  priority: string;
+}
+
+interface TicketFormProps {
+  onSubmit: (data: TicketData) => Promise<void>;
+  initialData?: TicketData;
+  buttonText?: string;
+  onCancel?: () => void;
+}
+
+const TicketForm: React.FC<TicketFormProps> = ({
   onSubmit,
   initialData,
   buttonText = "Submit",
   onCancel,
-}) {
+}) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [priority, setPriority] = useState("1");
@@ -26,7 +40,7 @@ export default function TicketForm({
     3: "High",
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!title.trim() || !description.trim()) {
@@ -61,7 +75,7 @@ export default function TicketForm({
           type="text"
           value={title}
           className="form-input"
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value)}
           required
         />
       </div>
@@ -71,8 +85,8 @@ export default function TicketForm({
         <textarea
           value={description}
           className="form-input"
-          onChange={(e) => setDescription(e.target.value)}
-          rows="4"
+          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setDescription(e.target.value)}
+          rows={4}
           required
         />
       </div>
@@ -86,7 +100,7 @@ export default function TicketForm({
               value={value}
               checked={priority === value}
               className="priority-input"
-              onChange={(e) => setPriority(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPriority(e.target.value)}
             />
             {label}
           </label>
@@ -111,4 +125,6 @@ export default function TicketForm({
       </div>
     </form>
   );
-}
+};
+
+export default TicketForm;

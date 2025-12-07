@@ -27,7 +27,7 @@ export default function TicketList() {
 
   return (
     <div className="ticket-list">
-      {sortedTickets.map((ticket) => (
+      {sortedTickets.map((ticket: any) => (
         <TicketItem key={ticket._id} ticket={ticket} />
       ))}
     </div>

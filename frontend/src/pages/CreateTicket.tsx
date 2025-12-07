@@ -9,7 +9,7 @@ export default function CreateTicket() {
   const navigate = useNavigate();
   const { refreshTickets } = useTickets();
 
-  const handleSubmit = async (ticketData) => {
+  const handleSubmit = async (ticketData: any) => {
     try {
       await createTicket(ticketData);
       await refreshTickets();
