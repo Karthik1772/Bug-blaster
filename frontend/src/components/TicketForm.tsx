@@ -70,8 +70,9 @@ const TicketForm: React.FC<TicketFormProps> = ({
   return (
     <form onSubmit={handleSubmit} className="ticket-form">
       <div>
-        <label>Title</label>
+        <label htmlFor="title">Title</label>
         <input
+          id="title"
           type="text"
           value={title}
           className="form-input"
@@ -81,8 +82,9 @@ const TicketForm: React.FC<TicketFormProps> = ({
       </div>
 
       <div>
-        <label>Description</label>
+        <label htmlFor="description">Description</label>
         <textarea
+          id="description"
           value={description}
           className="form-input"
           onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setDescription(e.target.value)}
