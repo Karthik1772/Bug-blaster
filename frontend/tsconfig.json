@@ -13,7 +13,7 @@
     "noEmit": true,
     "allowJs": true,
     "checkJs": false,
-    "types": ["react", "react-dom"]
+    "types": ["react", "react-dom", "jest", "node"]
   },
   "include": ["src"],
   "exclude": ["node_modules"]
