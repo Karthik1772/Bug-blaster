@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import TicketForm from "../components/TicketForm";
-import { getTicketById, updateTicket } from "../services/api";
-import { useTickets } from "../context/TicketContext";
+import TicketForm from "../../components/TicketForm";
+import { getTicketById, updateTicket } from "../../services/api";
+import { useTickets } from "../../context/TicketContext";
 import "./EditTicket.scss";
 
 export default function EditTicket() {
