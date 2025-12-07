@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../App.css";
+import "./NotFound.scss";
 
 export default function NotFound() {
   const navigate = useNavigate();

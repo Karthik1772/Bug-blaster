@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../App.css";
+import "./TicketForm.scss";
 
 // Define types for props and ticket data
 interface TicketData {

@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import TicketList from "../components/TicketList";
 import { useTickets } from "../context/TicketContext";
-
+import "./Home.scss";
 export default function Home() {
   const navigate = useNavigate();
   const { sortPreference, setSortPreference } = useTickets();

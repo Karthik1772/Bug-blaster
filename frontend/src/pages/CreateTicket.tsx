@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import TicketForm from "../components/TicketForm";
 import { createTicket } from "../services/api";
 import { useTickets } from "../context/TicketContext";
-import "../App.css";
+import "./CreateTicket.scss";
 
 export default function CreateTicket() {
   const navigate = useNavigate();

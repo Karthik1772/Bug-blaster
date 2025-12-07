@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import TicketForm from "../components/TicketForm";
 import { getTicketById, updateTicket } from "../services/api";
 import { useTickets } from "../context/TicketContext";
-import "../App.css";
+import "./EditTicket.scss";
 
 export default function EditTicket() {
   const { id } = useParams();

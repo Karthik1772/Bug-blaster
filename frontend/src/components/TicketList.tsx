@@ -2,7 +2,7 @@ import React from "react";
 import TicketItem from "./TicketItem";
 import { useTickets } from "../context/TicketContext";
 import { sortTickets } from "../utilities/sortingUtilities";
-import "../App.css";
+import "./TicketList.scss";
 
 export default function TicketList() {
   const { tickets, loading, error, sortPreference } = useTickets();

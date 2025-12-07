@@ -1,0 +1,109 @@
+/* Loading and Error States */
+.loading,
+.error,
+.no-tickets {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #dc3545;
+}
+
+.app-header {
+  flex-direction: column;
+  text-align: center;
+}
+
+.app-header h1 {
+  text-align: center;
+}
+
+/* Buttons */
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(56, 239, 125, 0.4);
+}
+
+.button-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.button-secondary:hover {
+  background: #5a6268;
+}
+
+.button-edit {
+  background: #28a745;
+  color: white;
+}
+
+.button-edit:hover {
+  background: #218838;
+}
+
+.button-delete {
+  background: #dc3545;
+  color: white;
+}
+
+.button-delete:hover {
+  background: #c82333;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .app-header h1 {
+    text-align: center;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .ticket-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-actions {
+    flex-direction: column;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+}
