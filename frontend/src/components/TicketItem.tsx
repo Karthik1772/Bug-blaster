@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { deleteTicket } from "../services/api";
 import { useTickets } from "../context/TicketContext";
-import "../App.css";
+import "../App.scss";
 
 interface Ticket {
   _id: string;

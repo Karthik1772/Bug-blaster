@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import CreateTicket from "./pages/CreateTicket";
 import EditTicket from "./pages/EditTicket";
 import NotFound from "./pages/NotFound";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
